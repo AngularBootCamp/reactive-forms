@@ -1,0 +1,4 @@
+
+.email-input.ng-dirty.ng-invalid {
+  background-color: red;
+}

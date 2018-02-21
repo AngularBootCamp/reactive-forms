@@ -1,0 +1,82 @@
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Employee Details</div>
+    <form [formGroup]="employeeDetailsFormGroup" (ngSubmit)="saveEmployeeDetails()">
+      <div class="row">
+        <div class="col s4">
+          <label for="firstName">First Name</label>
+          <input id="firstName" type="text" formControlName="firstName">
+          <div *ngIf="employeeDetailsFormGroup.get('firstName').hasError('required') && employeeDetailsFormGroup.get('firstName').touched">
+            Please enter a name
+          </div>
+        </div>
+        <div class="col s4">
+          <label for="lastName">Last Name</label>
+          <input id="lastName" type="text" formControlName="lastName">
+          <div *ngIf="employeeDetailsFormGroup.get('lastName').hasError('required') && employeeDetailsFormGroup.get('lastName').touched">
+            Please enter a name
+          </div>
+        </div>
+        <div class="col s2">
+          <label for="middleInitial">Middle Initial</label>
+          <input type="middleInitial" type="text" formControlName="middleInitial">
+          <div *ngIf="employeeDetailsFormGroup.get('middleInitial').hasError('maxlength') && employeeDetailsFormGroup.get('middleInitial').touched">
+            Only 1 character please
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4">
+          <label for="position"> Position: </label>
+          <input id="position" type="text" formControlName="position">
+          <div *ngIf="employeeDetailsFormGroup.get('position').hasError('minlength') && employeeDetailsFormGroup.get('position').touched">
+            Position is too short
+          </div>
+        </div>
+        <div class="col s4">
+          <label for="department"> Department: </label>
+          <select id="department" formControlName="department">
+            <option *ngFor="let dep of departments" [value]="dep">{{dep}}</option>
+          </select>
+        </div>
+        <div class="col s4">
+          <label for="immediateSupervisor"> Supervisor: </label>
+          <input id="immediateSupervisor" type="text" formControlName="immediateSupervisor">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4">
+          <label for="phone"> Phone: </label>
+          <input id="phone" type="tel" formControlName="phoneNumber" [class.invalid]="employeeDetailsFormGroup.get('phoneNumber').invalid">
+        </div>
+        <div class="col s4">
+          <label for="email"> Email: </label>
+          <input class="email-input" id="email" type="email" formControlName="email">
+        </div>
+        <div class="col s4">
+          <p>
+            <input name="status" formControlName="status" value="Active" type="radio" id="status1">
+            <label for="status1">Active</label>
+          </p>
+          <p>
+            <input name="status" formControlName="status" value="Inactive" type="radio" id="status2">
+            <label for="status2">Inactive</label>
+          </p>
+        </div>
+      </div>
+      <button class="btn" [disabled]="!employeeDetailsFormGroup.valid" [class.disabled]="!employeeDetailsFormGroup.valid">Save</button>
+    </form>
+  </div>
+</section>
+
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Form Data</div>
+
+    Form Value Object:
+    <pre>{{ employeeDetailsFormGroup.value | json }}</pre> Form Validity:
+    <div>{{ employeeDetailsFormGroup.valid }}</div>
+
+    <button class="btn" (click)="logTheForm()">Log Form Object</button>
+  </div>
+</section>

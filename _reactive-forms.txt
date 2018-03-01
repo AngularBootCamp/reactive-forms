@@ -1,4 +1,0 @@
-This placeholder file exists so that its name will be visible
-at the top of the list of files. In some cases it is otherwise 
-tedious to determine what "step" of our curriculum you're
-viewing.

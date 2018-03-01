@@ -1,24 +1,13 @@
-# Angular Boot Camp Curriculum - reactive-forms
+# Angular Boot Camp example: reactive-forms
 
 <img src="https://angularbootcamp.com/images/angular-boot-camp-logo.svg" width="394" height="106" />
 
-Hello, and welcome to the Angular Boot Camp curriculum examples. This repository
-represents one of many steps that students will explore during Angular Boot
-Camp. The content introduces a topic for discussion, in the form of a small
-Angular CLI application. Please visit
-[Angular Boot Camp](https://angularbootcamp.com/)
-for more information.
-
-For a listing of published curriculum examples, see:
-
-https://github.com/AngularBootCamp/abc
-
-## Getting started
+## Run and edit this example code
 
 The fast and easy way to use this example is via
 [StackBlitz](https://stackblitz.io/):
 
-[StackBlitz for reactive-forms](https://stackblitz.io/github/AngularBootCamp/reactive-forms)
+**[StackBlitz for reactive-forms](https://stackblitz.io/github/AngularBootCamp/reactive-forms)**
 
 Alternatively, you can clone the repository locally to run the example:
 
@@ -29,9 +18,16 @@ npm install
 npm start
 ```
 
-Then browse to:
+Then browse to [http://localhost:4200](http://localhost:4200).
 
-localhost:4200
+## Orientation
+
+Welcome to the Angular Boot Camp curriculum examples. This repository
+contains one of many examples that students explore during Angular Boot
+Camp. The content introduces a topic for discussion, in the form of a small
+Angular CLI application. For a listing of published curriculum examples, see:
+
+https://github.com/AngularBootCamp/abc
 
 ## Who?
 
@@ -48,4 +44,4 @@ We offer:
 
 <img src="https://oasisdigital.com/images/od-logo.svg" width="379" height="143" />
 
-Copyright 2018 Oasis Digital Solutions Inc.
+Copyright 2016-2018 Oasis Digital Solutions Inc.

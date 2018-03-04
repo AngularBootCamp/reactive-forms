@@ -7,7 +7,7 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: local('Material Icons'), local('MaterialIcons-Regular'), url(/assets/googlefonts.woff2) format('woff2');
+  /* loaded via link element in index.html */
 }
 
 .material-icons {
@@ -98,6 +98,7 @@ nav.secondary-nav {
   background: linear-gradient(to right, #2196F3 90%, rgba(33,150,243,0));
   margin-left: 10px;
   height: 64px;
+  overflow: hidden;
 }
 
 .brand-logo > a {
@@ -146,3 +147,6 @@ a.btn-floating {
   text-align: right;
 }
 
+.card-action .btn {
+  margin-bottom: 5px;
+}

@@ -1,8 +1,7 @@
-
 @import '/assets/materialize/materialize.css';
 
 /* Google Material Icons */
-/* fallback */
+
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -25,7 +24,6 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
-/* Eng Google Material Icons */
 
 html {
   color: #212121;
@@ -56,6 +54,8 @@ select {
   background-color: #d50000
 }
 
+/* component labelling */
+
 .simple-card {
   background-color: white;
   border: 1px solid #B6B6B6;
@@ -73,6 +73,8 @@ select {
   background-color: #ff5252;
   float: right;
   transform: translate(8px, -8px);
+  grid-area: 1 / 1 / 2 / -1;
+  justify-self: end;
 }
 
 /* Navbar content */
@@ -80,7 +82,7 @@ select {
 nav {
   height: 64px;
   line-height: 64px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 nav.secondary-nav {
@@ -95,13 +97,13 @@ nav.secondary-nav {
 
 .brand-logo {
   /* Solid background that fades to transparent on the right edge */
-  background: linear-gradient(to right, #2196F3 90%, rgba(33,150,243,0));
+  background: linear-gradient(to right, #2196F3 90%, rgba(33, 150, 243, 0));
   margin-left: 10px;
   height: 64px;
   overflow: hidden;
 }
 
-.brand-logo > a {
+.brand-logo>a {
   background: url(assets/logo.png) no-repeat;
   position: absolute;
   background-size: 100% 100%;
@@ -111,9 +113,10 @@ nav.secondary-nav {
   margin-top: 7px;
 }
 
-.brand-logo > span {
+.brand-logo>span {
   margin-left: 157px;
-  margin-right: 50px; /* Add room for the fade to transparent */
+  margin-right: 50px;
+  /* Add room for the fade to transparent */
   font-size: 24px;
   line-height: 64px;
 }
@@ -150,6 +153,7 @@ a.btn-floating {
 .card-action .btn {
   margin-bottom: 5px;
 }
+
 /* CSS grid classes */
 
 .two-across,

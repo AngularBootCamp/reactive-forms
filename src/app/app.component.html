@@ -1,33 +1,33 @@
 <section class="card">
   <div class="card-content">
     <div class="card-title">Employee Details</div>
-    <form [formGroup]="employeeDetailsFormGroup" (ngSubmit)="saveEmployeeDetails()">
+    <form [formGroup]="details" (ngSubmit)="saveEmployeeDetails()">
       <div class="three-across">
         <div>
           <label for="firstName">First Name</label>
           <input id="firstName" type="text" formControlName="firstName">
-          <div *ngIf="employeeDetailsFormGroup.get('firstName').hasError('required') && employeeDetailsFormGroup.get('firstName').touched">
-            Please enter a name
+          <div *ngIf="details.get('firstName')?.hasError('required') && details.get('firstName')?.touched">
+            Please enter first name
           </div>
         </div>
         <div>
           <label for="lastName">Last Name</label>
           <input id="lastName" type="text" formControlName="lastName">
-          <div *ngIf="employeeDetailsFormGroup.get('lastName').hasError('required') && employeeDetailsFormGroup.get('lastName').touched">
-            Please enter a name
+          <div *ngIf="details.get('lastName')?.hasError('required') && details.get('lastName')?.touched">
+            Please enter last name
           </div>
         </div>
         <div>
           <label for="middleInitial">Middle Initial</label>
           <input type="middleInitial" type="text" formControlName="middleInitial">
-          <div *ngIf="employeeDetailsFormGroup.get('middleInitial').hasError('maxlength') && employeeDetailsFormGroup.get('middleInitial').touched">
+          <div *ngIf="details.get('middleInitial')?.hasError('maxlength') && details.get('middleInitial')?.touched">
             Only 1 character please
           </div>
         </div>
         <div>
           <label for="position"> Position: </label>
           <input id="position" type="text" formControlName="position">
-          <div *ngIf="employeeDetailsFormGroup.get('position').hasError('minlength') && employeeDetailsFormGroup.get('position').touched">
+          <div *ngIf="details.get('position')?.hasError('minlength') && details.get('position')?.touched">
             Position is too short
           </div>
         </div>
@@ -43,7 +43,7 @@
         </div>
         <div>
           <label for="phone"> Phone: </label>
-          <input id="phone" type="tel" formControlName="phoneNumber" [class.invalid]="employeeDetailsFormGroup.get('phoneNumber').invalid">
+          <input id="phone" type="tel" formControlName="phoneNumber" [class.invalid]="details.get('phoneNumber')?.invalid">
         </div>
         <div>
           <label for="email"> Email: </label>
@@ -60,7 +60,7 @@
           </p>
         </div>
       </div>
-      <button class="btn" [disabled]="!employeeDetailsFormGroup.valid" [class.disabled]="!employeeDetailsFormGroup.valid">Save</button>
+      <button class="btn" [disabled]="!details.valid" [class.disabled]="!details.valid">Save</button>
     </form>
   </div>
 </section>
@@ -70,8 +70,8 @@
     <div class="card-title">Form Data</div>
 
     Form Value Object:
-    <pre>{{ employeeDetailsFormGroup.value | json }}</pre> Form Validity:
-    <div>{{ employeeDetailsFormGroup.valid }}</div>
+    <pre>{{ details.value | json }}</pre> Form Validity:
+    <div>{{ details.valid }}</div>
 
     <button class="btn" (click)="logTheForm()">Log Form Object</button>
   </div>

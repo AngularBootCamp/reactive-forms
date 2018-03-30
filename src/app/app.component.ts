@@ -7,14 +7,14 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['app.component.css']
 })
 export class AppComponent {
-  employeeDetailsFormGroup: FormGroup;
+  details: FormGroup;
   departments = [
     'HR',
     'Payroll'
   ];
 
   constructor(fb: FormBuilder) {
-    this.employeeDetailsFormGroup = fb.group({
+    this.details = fb.group({
       firstName: ['', Validators.required],
       lastName: ['', [Validators.required]],
       middleInitial: ['', Validators.maxLength(1)],
@@ -28,10 +28,10 @@ export class AppComponent {
   }
 
   saveEmployeeDetails(): void {
-    console.log('Form Submitted', this.employeeDetailsFormGroup.value);
+    console.log('Form Submitted', this.details.value);
   }
 
   logTheForm(): void {
-    console.log('form: ', this.employeeDetailsFormGroup);
+    console.log('form: ', this.details);
   }
 }

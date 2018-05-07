@@ -19,7 +19,7 @@
         </div>
         <div>
           <label for="middleInitial">Middle Initial</label>
-          <input type="middleInitial" type="text" formControlName="middleInitial">
+          <input id="middleInitial" type="text" formControlName="middleInitial">
           <div *ngIf="details.get('middleInitial')?.hasError('maxlength') && details.get('middleInitial')?.touched">
             Only 1 character please
           </div>

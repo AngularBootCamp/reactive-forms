@@ -36,3 +36,5 @@
 Thumbs.db
 
 AUTHOR
+# This is a bad idea for production, but suitable for these demos:
+yarn.lock

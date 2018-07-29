@@ -135,6 +135,10 @@ a.btn-floating {
   user-select: none;
 }
 
+.time-block {
+  margin: 20px;
+}
+
 .time-block div {
   background-color: #eaeaea;
   border-radius: 2px;
@@ -188,4 +192,8 @@ a.btn-floating {
   .four-across {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+.pad-around {
+  padding: 15px;
 }

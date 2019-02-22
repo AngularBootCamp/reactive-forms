@@ -16,7 +16,7 @@ export class AppComponent {
   constructor(fb: FormBuilder) {
     this.details = fb.group({
       firstName: ['', Validators.required],
-      lastName: ['', [Validators.required]],
+      lastName: ['', Validators.required],
       middleInitial: ['', Validators.maxLength(1)],
       position: ['Sales', Validators.minLength(3)],
       department: [''],

@@ -5,62 +5,132 @@
       <div class="three-across">
         <div>
           <label for="firstName">First Name</label>
-          <input id="firstName" type="text" formControlName="firstName">
-          <div *ngIf="details.get('firstName')?.hasError('required') && details.get('firstName')?.touched">
+          <input
+            id="firstName"
+            type="text"
+            formControlName="firstName"
+          />
+          <div
+            *ngIf="
+              details.get('firstName')?.hasError('required') &&
+              details.get('firstName')?.touched
+            "
+          >
             Please enter first name
           </div>
         </div>
         <div>
           <label for="lastName">Last Name</label>
-          <input id="lastName" type="text" formControlName="lastName">
-          <div *ngIf="details.get('lastName')?.hasError('required') && details.get('lastName')?.touched">
+          <input
+            id="lastName"
+            type="text"
+            formControlName="lastName"
+          />
+          <div
+            *ngIf="
+              details.get('lastName')?.hasError('required') &&
+              details.get('lastName')?.touched
+            "
+          >
             Please enter last name
           </div>
         </div>
         <div>
           <label for="middleInitial">Middle Initial</label>
-          <input id="middleInitial" type="text" formControlName="middleInitial">
-          <div *ngIf="details.get('middleInitial')?.hasError('maxlength') && details.get('middleInitial')?.touched">
+          <input
+            id="middleInitial"
+            type="text"
+            formControlName="middleInitial"
+          />
+          <div
+            *ngIf="
+              details.get('middleInitial')?.hasError('maxlength') &&
+              details.get('middleInitial')?.touched
+            "
+          >
             Only 1 character please
           </div>
         </div>
         <div>
           <label for="position"> Position: </label>
-          <input id="position" type="text" formControlName="position">
-          <div *ngIf="details.get('position')?.hasError('minlength') && details.get('position')?.touched">
+          <input
+            id="position"
+            type="text"
+            formControlName="position"
+          />
+          <div
+            *ngIf="
+              details.get('position')?.hasError('minlength') &&
+              details.get('position')?.touched
+            "
+          >
             Position is too short
           </div>
         </div>
         <div>
           <label for="department"> Department: </label>
           <select id="department" formControlName="department">
-            <option *ngFor="let dep of departments" [value]="dep">{{dep}}</option>
+            <option *ngFor="let dep of departments" [value]="dep">
+              {{ dep }}
+            </option>
           </select>
         </div>
         <div>
           <label for="immediateSupervisor"> Supervisor: </label>
-          <input id="immediateSupervisor" type="text" formControlName="immediateSupervisor">
+          <input
+            id="immediateSupervisor"
+            type="text"
+            formControlName="immediateSupervisor"
+          />
         </div>
         <div>
           <label for="phone"> Phone: </label>
-          <input id="phone" type="tel" formControlName="phoneNumber" [class.invalid]="details.get('phoneNumber')?.invalid">
+          <input
+            id="phone"
+            type="tel"
+            formControlName="phoneNumber"
+            [class.invalid]="details.get('phoneNumber')?.invalid"
+          />
         </div>
         <div>
           <label for="email"> Email: </label>
-          <input class="email-input" id="email" type="email" formControlName="email">
+          <input
+            class="email-input"
+            id="email"
+            type="email"
+            formControlName="email"
+          />
         </div>
         <div>
           <p>
-            <input name="status" formControlName="status" value="Active" type="radio" id="status1">
+            <input
+              name="status"
+              formControlName="status"
+              value="Active"
+              type="radio"
+              id="status1"
+            />
             <label for="status1">Active</label>
           </p>
           <p>
-            <input name="status" formControlName="status" value="Inactive" type="radio" id="status2">
+            <input
+              name="status"
+              formControlName="status"
+              value="Inactive"
+              type="radio"
+              id="status2"
+            />
             <label for="status2">Inactive</label>
           </p>
         </div>
       </div>
-      <button class="btn" [disabled]="!details.valid" [class.disabled]="!details.valid">Save</button>
+      <button
+        class="btn"
+        [disabled]="!details.valid"
+        [class.disabled]="!details.valid"
+      >
+        Save
+      </button>
     </form>
   </div>
 </section>
@@ -70,9 +140,12 @@
     <div class="card-title">Form Data</div>
 
     Form Value Object:
-    <pre>{{ details.value | json }}</pre> Form Validity:
+    <pre>{{ details.value | json }}</pre>
+    Form Validity:
     <div>{{ details.valid }}</div>
 
-    <button class="btn" (click)="logTheForm()">Log Form Object</button>
+    <button class="btn" (click)="logTheForm()">
+      Log Form Object
+    </button>
   </div>
 </section>

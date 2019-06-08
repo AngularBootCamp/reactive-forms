@@ -1,4 +1,4 @@
-@import '/assets/materialize/materialize.css';
+@import './assets/materialize/materialize.css';
 
 /* Google Material Icons */
 
@@ -196,4 +196,20 @@ a.btn-floating {
 
 .pad-around {
   padding: 15px;
+}
+
+.day-0 {
+  height: 80px;
+}
+.day-1 {
+  height: 75px;
+}
+.day-2 {
+  height: 60px;
+}
+.day-3 {
+  height: 65px;
+}
+.day-4 {
+  height: 80px;
 }

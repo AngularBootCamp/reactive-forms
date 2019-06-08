@@ -1,9 +1,12 @@
-
 .email-input.ng-dirty.ng-invalid {
   animation: ohnoes 0.3s ease infinite alternate;
 }
 
 @keyframes ohnoes {
-  from { box-shadow: none; }
-  to   { box-shadow: 0 0 30px 30px red; }
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: 0 0 30px 30px red;
+  }
 }

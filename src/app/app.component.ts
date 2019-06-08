@@ -8,10 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AppComponent {
   details: FormGroup;
-  departments = [
-    'HR',
-    'Payroll'
-  ];
+  departments = ['HR', 'Payroll'];
 
   constructor(fb: FormBuilder) {
     this.details = fb.group({

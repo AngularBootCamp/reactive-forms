@@ -2754,10 +2754,8 @@ video.responsive-video {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translate3d(0, 0, 0);
+  transform: translateX(-50%);
 }
 
 .pin-top, .pin-bottom {
@@ -2777,8 +2775,7 @@ ul.staggered-list li {
 
 .fade-in {
   opacity: 0;
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
+  transform-origin: 0 50%;
 }
 
 /*********************
@@ -3397,20 +3394,17 @@ nav .brand-logo {
 
 nav .brand-logo.center {
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 992px) {
   nav .brand-logo {
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
   nav .brand-logo.left, nav .brand-logo.right {
     padding: 0;
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
   }
   nav .brand-logo.left {
     left: 0.5rem;
@@ -3795,22 +3789,16 @@ small {
 }
 
 .scale-transition {
-  transition: -webkit-transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important;
   transition: transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important;
-  transition: transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63), -webkit-transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important;
 }
 
 .scale-transition.scale-out {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  transition: -webkit-transform .2s !important;
+  transform: scale(0);
   transition: transform .2s !important;
-  transition: transform .2s, -webkit-transform .2s !important;
 }
 
 .scale-transition.scale-in {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .card-panel {
@@ -4191,8 +4179,7 @@ small {
   border-radius: 0 0 50% 50%;
   background-color: #323232;
   z-index: -1;
-  -webkit-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
   visibility: hidden;
 }
 
@@ -4366,8 +4353,7 @@ button.btn-floating {
   text-align: right;
   right: 64px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   height: 100%;
   left: auto;
   width: 500px;
@@ -4447,8 +4433,7 @@ button.btn-floating {
   height: 40px;
   background-color: #26a69a;
   border-radius: 50%;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
 }
 
 .btn-flat {
@@ -4584,11 +4569,8 @@ button.btn-floating {
   opacity: 0;
   background: rgba(0, 0, 0, 0.2);
   transition: all 0.7s ease-out;
-  transition-property: opacity, -webkit-transform;
   transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
   pointer-events: none;
 }
 
@@ -4638,8 +4620,7 @@ button.btn-floating {
 }
 
 .waves-circle {
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
   -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 }
 
@@ -4937,8 +4918,7 @@ button.btn-floating {
 
 .chips:empty ~ label {
   font-size: 0.8rem;
-  -webkit-transform: translateY(-140%);
-          transform: translateY(-140%);
+  transform: translateY(-140%);
 }
 
 .materialboxed {
@@ -5298,8 +5278,7 @@ textarea.materialize-textarea:focus.valid + label:after, .select-wrapper.valid +
   content: attr(data-success);
   color: #4CAF50;
   opacity: 1;
-  -webkit-transform: translateY(9px);
-          transform: translateY(9px);
+  transform: translateY(9px);
 }
 
 input:not([type]).invalid + label:after,
@@ -5331,8 +5310,7 @@ textarea.materialize-textarea:focus.invalid + label:after, .select-wrapper.inval
   content: attr(data-error);
   color: #F44336;
   opacity: 1;
-  -webkit-transform: translateY(9px);
-          transform: translateY(9px);
+  transform: translateY(9px);
 }
 
 input:not([type]) + label:after,
@@ -5390,22 +5368,16 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   height: 100%;
   font-size: 1rem;
   cursor: text;
-  transition: -webkit-transform .2s ease-out;
   transition: transform .2s ease-out;
-  transition: transform .2s ease-out, -webkit-transform .2s ease-out;
-  -webkit-transform-origin: 0% 100%;
-          transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
   text-align: initial;
-  -webkit-transform: translateY(12px);
-          transform: translateY(12px);
+  transform: translateY(12px);
   pointer-events: none;
 }
 
 .input-field label:not(.label-icon).active {
-  -webkit-transform: translateY(-14px) scale(0.8);
-          transform: translateY(-14px) scale(0.8);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
+  transform: translateY(-14px) scale(0.8);
+  transform-origin: 0 0;
 }
 
 .input-field .prefix {
@@ -5514,8 +5486,7 @@ textarea.materialize-textarea.validate + label::after {
 }
 
 textarea.materialize-textarea.validate + label:not(.label-icon).active {
-  -webkit-transform: translateY(-25px);
-          transform: translateY(-25px);
+  transform: translateY(-25px);
 }
 
 .hiddendiv {
@@ -5603,8 +5574,7 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
 }
 
 [type="radio"]:not(:checked) + label:after {
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
 }
 
 /* Checked styles */
@@ -5624,14 +5594,12 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
 }
 
 [type="radio"]:checked + label:after {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 /* Radio With gap */
 [type="radio"].with-gap:checked + label:after {
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  transform: scale(0.5);
 }
 
 /* Focused styles */
@@ -5724,8 +5692,7 @@ form p:last-child {
 
 [type="checkbox"]:not(.filled-in) + label:after {
   border: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
 }
 
 [type="checkbox"]:not(:checked):disabled + label:before {
@@ -5734,8 +5701,7 @@ form p:last-child {
 }
 
 [type="checkbox"].tabbed:focus + label:after {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   border: 0;
   border-radius: 50%;
   box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
@@ -5751,12 +5717,10 @@ form p:last-child {
   border-left: 2px solid transparent;
   border-right: 2px solid #26a69a;
   border-bottom: 2px solid #26a69a;
-  -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
+  transform: rotate(40deg);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
 }
 
 [type="checkbox"]:checked:disabled + label:before {
@@ -5774,12 +5738,10 @@ form p:last-child {
   border-left: none;
   border-right: 2px solid #26a69a;
   border-bottom: none;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
 }
 
 [type="checkbox"]:indeterminate:disabled + label:before {
@@ -5807,10 +5769,8 @@ form p:last-child {
   border: 3px solid transparent;
   left: 6px;
   top: 10px;
-  -webkit-transform: rotateZ(37deg);
-          transform: rotateZ(37deg);
-  -webkit-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
+  transform: rotateZ(37deg);
+  transform-origin: 100% 100%;
 }
 
 [type="checkbox"].filled-in:not(:checked) + label:after {
@@ -5831,10 +5791,8 @@ form p:last-child {
   border-left: 2px solid transparent;
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
-  -webkit-transform: rotateZ(37deg);
-          transform: rotateZ(37deg);
-  -webkit-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
+  transform: rotateZ(37deg);
+  transform-origin: 100% 100%;
 }
 
 [type="checkbox"].filled-in:checked + label:after {
@@ -5933,9 +5891,7 @@ form p:last-child {
   border-radius: 50%;
   left: 0;
   top: -3px;
-  transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease, -webkit-transform .1s ease;
   transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease, transform .1s ease;
-  transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease, transform .1s ease, -webkit-transform .1s ease;
 }
 
 .switch label .lever:before {
@@ -5949,15 +5905,13 @@ form p:last-child {
 
 input[type=checkbox]:checked:not(:disabled) ~ .lever:active::before,
 input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::before {
-  -webkit-transform: scale(2.4);
-          transform: scale(2.4);
+  transform: scale(2.4);
   background-color: rgba(38, 166, 154, 0.15);
 }
 
 input[type=checkbox]:not(:disabled) ~ .lever:active:before,
 input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::before {
-  -webkit-transform: scale(2.4);
-          transform: scale(2.4);
+  transform: scale(2.4);
   background-color: rgba(0, 0, 0, 0.08);
 }
 
@@ -6206,10 +6160,8 @@ input[type=range] + .thumb {
   border-radius: 50%;
   background-color: #26a69a;
   margin-left: 7px;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform-origin: 50% 50%;
+  transform: rotate(-45deg);
 }
 
 input[type=range] + .thumb .value {
@@ -6218,8 +6170,7 @@ input[type=range] + .thumb .value {
   text-align: center;
   color: #26a69a;
   font-size: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 input[type=range] + .thumb.active {
@@ -6250,8 +6201,7 @@ input[type=range]::-webkit-slider-thumb {
   width: 14px;
   border-radius: 50%;
   background-color: #26a69a;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
   margin: -5px 0 0 0;
   transition: .3s;
 }
@@ -6363,8 +6313,7 @@ input[type=range]:focus::-ms-fill-upper {
   left: 0;
   top: 0;
   margin: 0;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
   height: 100%;
   height: calc(100% + 60px);
   height: -moz-calc(100%);
@@ -6375,17 +6324,14 @@ input[type=range]:focus::-ms-fill-upper {
   will-change: transform;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-transform: translateX(-105%);
-          transform: translateX(-105%);
+  transform: translateX(-105%);
 }
 
 .side-nav.right-aligned {
   right: 0;
-  -webkit-transform: translateX(105%);
-          transform: translateX(105%);
+  transform: translateX(105%);
   left: auto;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  transform: translateX(100%);
 }
 
 .side-nav .collapsible {
@@ -6535,8 +6481,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .side-nav.fixed {
   left: 0;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
   position: fixed;
 }
 
@@ -6547,12 +6492,10 @@ input[type=range]:focus::-ms-fill-upper {
 
 @media only screen and (max-width: 992px) {
   .side-nav.fixed {
-    -webkit-transform: translateX(-105%);
-            transform: translateX(-105%);
+    transform: translateX(-105%);
   }
   .side-nav.fixed.right-aligned {
-    -webkit-transform: translateX(105%);
-            transform: translateX(105%);
+    transform: translateX(105%);
   }
   .side-nav a {
     padding: 0 16px;
@@ -6644,8 +6587,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 @keyframes container-rotate {
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -6762,43 +6704,35 @@ input[type=range]:focus::-ms-fill-upper {
 
 @keyframes fill-unfill-rotate {
   12.5% {
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+    transform: rotate(135deg);
   }
   /* 0.5 * ARCSIZE */
   25% {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
+    transform: rotate(270deg);
   }
   /* 1   * ARCSIZE */
   37.5% {
-    -webkit-transform: rotate(405deg);
-            transform: rotate(405deg);
+    transform: rotate(405deg);
   }
   /* 1.5 * ARCSIZE */
   50% {
-    -webkit-transform: rotate(540deg);
-            transform: rotate(540deg);
+    transform: rotate(540deg);
   }
   /* 2   * ARCSIZE */
   62.5% {
-    -webkit-transform: rotate(675deg);
-            transform: rotate(675deg);
+    transform: rotate(675deg);
   }
   /* 2.5 * ARCSIZE */
   75% {
-    -webkit-transform: rotate(810deg);
-            transform: rotate(810deg);
+    transform: rotate(810deg);
   }
   /* 3   * ARCSIZE */
   87.5% {
-    -webkit-transform: rotate(945deg);
-            transform: rotate(945deg);
+    transform: rotate(945deg);
   }
   /* 3.5 * ARCSIZE */
   to {
-    -webkit-transform: rotate(1080deg);
-            transform: rotate(1080deg);
+    transform: rotate(1080deg);
   }
   /* 4   * ARCSIZE */
 }
@@ -7001,14 +6935,12 @@ input[type=range]:focus::-ms-fill-upper {
 .circle-clipper.left .circle {
   left: 0;
   border-right-color: transparent !important;
-  -webkit-transform: rotate(129deg);
   transform: rotate(129deg);
 }
 
 .circle-clipper.right .circle {
   left: -100%;
   border-left-color: transparent !important;
-  -webkit-transform: rotate(-129deg);
   transform: rotate(-129deg);
 }
 
@@ -7038,16 +6970,13 @@ input[type=range]:focus::-ms-fill-upper {
 
 @keyframes left-spin {
   from {
-    -webkit-transform: rotate(130deg);
-            transform: rotate(130deg);
+    transform: rotate(130deg);
   }
   50% {
-    -webkit-transform: rotate(-5deg);
-            transform: rotate(-5deg);
+    transform: rotate(-5deg);
   }
   to {
-    -webkit-transform: rotate(130deg);
-            transform: rotate(130deg);
+    transform: rotate(130deg);
   }
 }
 
@@ -7065,16 +6994,13 @@ input[type=range]:focus::-ms-fill-upper {
 
 @keyframes right-spin {
   from {
-    -webkit-transform: rotate(-130deg);
-            transform: rotate(-130deg);
+    transform: rotate(-130deg);
   }
   50% {
-    -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
+    transform: rotate(5deg);
   }
   to {
-    -webkit-transform: rotate(-130deg);
-            transform: rotate(-130deg);
+    transform: rotate(-130deg);
   }
 }
 
@@ -7198,12 +7124,9 @@ input[type=range]:focus::-ms-fill-upper {
   position: relative;
   width: 100%;
   height: 400px;
-  -webkit-perspective: 500px;
-          perspective: 500px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
+  perspective: 500px;
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
 }
 
 .carousel.carousel-slider {
@@ -7300,26 +7223,20 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .tap-target-wrapper.open .tap-target {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   opacity: .95;
-  transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1), opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-  transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1), opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .tap-target-wrapper.open .tap-target-wave::before {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .tap-target-wrapper.open .tap-target-wave::after {
   visibility: visible;
   -webkit-animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
           animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
-  transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
   transition: opacity .3s, transform .3s, visibility 0s 1s;
-  transition: opacity .3s, transform .3s, visibility 0s 1s, -webkit-transform .3s;
 }
 
 .tap-target {
@@ -7331,11 +7248,8 @@ input[type=range]:focus::-ms-fill-upper {
   width: 100%;
   height: 100%;
   opacity: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  transform: scale(0);
   transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1), opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-  transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1), opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .tap-target-content {
@@ -7360,26 +7274,20 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .tap-target-wave::before {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  transition: -webkit-transform .3s;
+  transform: scale(0);
   transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
 }
 
 .tap-target-wave::after {
   visibility: hidden;
-  transition: opacity .3s, visibility 0s, -webkit-transform .3s;
   transition: opacity .3s, transform .3s, visibility 0s;
-  transition: opacity .3s, transform .3s, visibility 0s, -webkit-transform .3s;
   z-index: -1;
 }
 
 .tap-target-origin {
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 10002;
   position: absolute !important;
 }
@@ -7410,9 +7318,7 @@ input[type=range]:focus::-ms-fill-upper {
   left: 0;
   background-color: inherit;
   border-radius: inherit;
-  transition: opacity .3s, -webkit-transform .3s;
   transition: opacity .3s, transform .3s;
-  transition: opacity .3s, transform .3s, -webkit-transform .3s;
   -webkit-animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
           animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
   z-index: -1;
@@ -7421,36 +7327,30 @@ input[type=range]:focus::-ms-fill-upper {
 @-webkit-keyframes pulse-animation {
   0% {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   50% {
     opacity: 0;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
   }
   100% {
     opacity: 0;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
   }
 }
 
 @keyframes pulse-animation {
   0% {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   50% {
     opacity: 0;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
   }
   100% {
     opacity: 0;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
   }
 }
 

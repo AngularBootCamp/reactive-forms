@@ -7,6 +7,7 @@
   font-style: normal;
   font-weight: 400;
   /* loaded via link element in index.html */
+  /* for best StackBlitz compatibility */
 }
 
 .material-icons {
@@ -39,29 +40,22 @@ select {
 
 .btn {
   color: white;
-  background-color: #2196F3
+  background-color: #2196f3;
 }
 
 .btn:hover {
-  background-color: #1976D2;
+  background-color: #1976d2;
 }
 
 .btn-floating {
-  background-color: #ff5252
+  background-color: #ff5252;
 }
 
 .btn-floating:hover {
-  background-color: #d50000
+  background-color: #d50000;
 }
 
 /* component labelling */
-
-.simple-card {
-  background-color: white;
-  border: 1px solid #B6B6B6;
-  padding: 3px;
-  margin: 3px
-}
 
 .component-marker {
   color: #fff;
@@ -92,18 +86,22 @@ nav.secondary-nav {
 }
 
 .nav-wrapper {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 .brand-logo {
   /* Solid background that fades to transparent on the right edge */
-  background: linear-gradient(to right, #2196F3 90%, rgba(33, 150, 243, 0));
+  background: linear-gradient(
+    to right,
+    #2196f3 90%,
+    rgba(33, 150, 243, 0)
+  );
   margin-left: 10px;
   height: 64px;
   overflow: hidden;
 }
 
-.brand-logo>a {
+.brand-logo > a {
   background: url(assets/logo.png) no-repeat;
   position: absolute;
   background-size: 100% 100%;
@@ -113,7 +111,7 @@ nav.secondary-nav {
   margin-top: 7px;
 }
 
-.brand-logo>span {
+.brand-logo > span {
   margin-left: 157px;
   margin-right: 50px;
   /* Add room for the fade to transparent */
@@ -129,29 +127,6 @@ a.btn-floating {
 
 .green-background {
   background-color: green;
-}
-
-.unselectable {
-  user-select: none;
-}
-
-.time-block {
-  margin: 20px;
-}
-
-.time-block div {
-  background-color: #eaeaea;
-  border-radius: 2px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  width: 25px;
-  padding: 2px;
-  margin: 2px;
-  display: inline-block;
-  text-align: center;
-}
-
-.number-column {
-  text-align: right;
 }
 
 .card-action .btn {
@@ -194,22 +169,12 @@ a.btn-floating {
   }
 }
 
-.pad-around {
-  padding: 15px;
-}
+/* Space out buttons a bit */
 
-.day-0 {
-  height: 80px;
-}
-.day-1 {
-  height: 75px;
-}
-.day-2 {
-  height: 60px;
-}
-.day-3 {
-  height: 65px;
-}
-.day-4 {
-  height: 80px;
+.btn span,
+.btn-large span,
+.btn-floating span,
+.btn-flat span {
+  font-size: 1.3rem;
+  line-height: inherit;
 }

@@ -1,4 +1,4 @@
-.email-input.ng-dirty.ng-invalid {
+.email-input.ng-touched.ng-invalid {
   animation: ohnoes 0.3s ease infinite alternate;
 }
 

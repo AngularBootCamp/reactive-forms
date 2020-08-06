@@ -1,0 +1,10 @@
+{
+  "baseUrl": "http://localhost:4300",
+  "integrationFolder": "./src/integration",
+  "modifyObstructiveCode": false,
+  "pluginsFile": false,
+  "supportFile": false,
+  "video": false,
+  "chromeWebSecurity": false,
+  "fileServerFolder": "."
+}

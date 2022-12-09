@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators
+} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +12,23 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  details: FormGroup;
+  details: FormGroup<{
+    firstName: FormControl<string | null>;
+    lastName: FormControl<string | null>;
+    middleInitial: FormControl<string | null>;
+    position: FormControl<string | null>;
+    department: FormControl<string | null>;
+    immediateSupervisor: FormControl<string | null>;
+    phoneNumber: FormControl<string | null>;
+    email: FormControl<string | null>;
+    status: FormControl<string | null>;
+  }>;
   departments = ['HR', 'Payroll'];
+
+  // Consider using NonNullableFormBuilder if you never
+  // set or want to reset any of your controls to a `null` value
+  // Learn more about Typed Forms Nullability here:
+  // https://angular.io/guide/typed-forms#nullability
 
   constructor(fb: FormBuilder) {
     this.details = fb.group({

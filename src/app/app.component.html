@@ -12,8 +12,8 @@
           />
           <div
             *ngIf="
-              details.get('firstName')?.hasError('required') &&
-              details.get('firstName')?.touched
+              details.controls.firstName.hasError('required') &&
+              details.controls.firstName.touched
             "
           >
             Please enter first name
@@ -28,8 +28,8 @@
           />
           <div
             *ngIf="
-              details.get('lastName')?.hasError('required') &&
-              details.get('lastName')?.touched
+              details.controls.lastName.hasError('required') &&
+              details.controls.lastName.touched
             "
           >
             Please enter last name
@@ -44,8 +44,8 @@
           />
           <div
             *ngIf="
-              details.get('middleInitial')?.hasError('maxlength') &&
-              details.get('middleInitial')?.touched
+              details.controls.middleInitial.hasError('maxlength') &&
+              details.controls.middleInitial.touched
             "
           >
             Only 1 character please
@@ -60,8 +60,8 @@
           />
           <div
             *ngIf="
-              details.get('position')?.hasError('minlength') &&
-              details.get('position')?.touched
+              details.controls.position.hasError('minlength') &&
+              details.controls.position.touched
             "
           >
             Position is too short
@@ -89,7 +89,7 @@
             id="phone"
             type="tel"
             formControlName="phoneNumber"
-            [class.invalid]="details.get('phoneNumber')?.invalid"
+            [class.invalid]="details.controls.phoneNumber.invalid"
           />
         </div>
         <div>

@@ -8,7 +8,7 @@
           <input
             id="firstName"
             type="text"
-            formControlName="firstName"
+            [formControl]="details.controls.firstName"
           />
           <div
             *ngIf="
@@ -24,7 +24,7 @@
           <input
             id="lastName"
             type="text"
-            formControlName="lastName"
+            [formControl]="details.controls.lastName"
           />
           <div
             *ngIf="
@@ -40,7 +40,7 @@
           <input
             id="middleInitial"
             type="text"
-            formControlName="middleInitial"
+            [formControl]="details.controls.middleInitial"
           />
           <div
             *ngIf="
@@ -56,7 +56,7 @@
           <input
             id="position"
             type="text"
-            formControlName="position"
+            [formControl]="details.controls.position"
           />
           <div
             *ngIf="
@@ -69,7 +69,10 @@
         </div>
         <div>
           <label for="department"> Department: </label>
-          <select id="department" formControlName="department">
+          <select
+            id="department"
+            [formControl]="details.controls.department"
+          >
             <option *ngFor="let dep of departments" [value]="dep">
               {{ dep }}
             </option>
@@ -80,7 +83,7 @@
           <input
             id="immediateSupervisor"
             type="text"
-            formControlName="immediateSupervisor"
+            [formControl]="details.controls.immediateSupervisor"
           />
         </div>
         <div>
@@ -88,7 +91,7 @@
           <input
             id="phone"
             type="tel"
-            formControlName="phoneNumber"
+            [formControl]="details.controls.phoneNumber"
             [class.invalid]="details.controls.phoneNumber.invalid"
           />
         </div>
@@ -98,14 +101,14 @@
             class="email-input"
             id="email"
             type="email"
-            formControlName="email"
+            [formControl]="details.controls.email"
           />
         </div>
         <div>
           <p>
             <input
               name="status"
-              formControlName="status"
+              [formControl]="details.controls.status"
               value="Active"
               type="radio"
               id="status1"
@@ -115,7 +118,7 @@
           <p>
             <input
               name="status"
-              formControlName="status"
+              [formControl]="details.controls.status"
               value="Inactive"
               type="radio"
               id="status2"

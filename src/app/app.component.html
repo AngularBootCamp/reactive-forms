@@ -1,148 +1,143 @@
-<section class="card">
-  <div class="card-content">
-    <div class="card-title">Employee Details</div>
-    <form [formGroup]="details" (ngSubmit)="saveEmployeeDetails()">
-      <div class="three-across">
-        <div>
-          <label for="firstName">First Name</label>
-          <input
-            id="firstName"
-            type="text"
-            [formControl]="details.controls.firstName"
-          />
-          <div
-            *ngIf="
-              details.controls.firstName.hasError('required') &&
-              details.controls.firstName.touched
-            "
-          >
-            Please enter first name
-          </div>
-        </div>
-        <div>
-          <label for="lastName">Last Name</label>
-          <input
-            id="lastName"
-            type="text"
-            [formControl]="details.controls.lastName"
-          />
-          <div
-            *ngIf="
-              details.controls.lastName.hasError('required') &&
-              details.controls.lastName.touched
-            "
-          >
-            Please enter last name
-          </div>
-        </div>
-        <div>
-          <label for="middleInitial">Middle Initial</label>
-          <input
-            id="middleInitial"
-            type="text"
-            [formControl]="details.controls.middleInitial"
-          />
-          <div
-            *ngIf="
-              details.controls.middleInitial.hasError('maxlength') &&
-              details.controls.middleInitial.touched
-            "
-          >
-            Only 1 character please
-          </div>
-        </div>
-        <div>
-          <label for="position"> Position: </label>
-          <input
-            id="position"
-            type="text"
-            [formControl]="details.controls.position"
-          />
-          <div
-            *ngIf="
-              details.controls.position.hasError('minlength') &&
-              details.controls.position.touched
-            "
-          >
-            Position is too short
-          </div>
-        </div>
-        <div>
-          <label for="department"> Department: </label>
-          <select
-            id="department"
-            [formControl]="details.controls.department"
-          >
-            <option *ngFor="let dep of departments" [value]="dep">
-              {{ dep }}
-            </option>
-          </select>
-        </div>
-        <div>
-          <label for="immediateSupervisor"> Supervisor: </label>
-          <input
-            id="immediateSupervisor"
-            type="text"
-            [formControl]="details.controls.immediateSupervisor"
-          />
-        </div>
-        <div>
-          <label for="phone"> Phone: </label>
-          <input
-            id="phone"
-            type="tel"
-            [formControl]="details.controls.phoneNumber"
-            [class.invalid]="details.controls.phoneNumber.invalid"
-          />
-        </div>
-        <div>
-          <label for="email"> Email: </label>
-          <input
-            class="email-input"
-            id="email"
-            type="email"
-            [formControl]="details.controls.email"
-          />
-        </div>
-        <div>
-          <p>
-            <input
-              name="status"
-              [formControl]="details.controls.status"
-              value="Active"
-              type="radio"
-              id="status1"
-            />
-            <label for="status1">Active</label>
-          </p>
-          <p>
-            <input
-              name="status"
-              [formControl]="details.controls.status"
-              value="Inactive"
-              type="radio"
-              id="status2"
-            />
-            <label for="status2">Inactive</label>
-          </p>
+<article>
+  <header>Employee Details</header>
+  <form [formGroup]="details" (ngSubmit)="saveEmployeeDetails()">
+    <div class="form-fields">
+      <div>
+        <label for="firstName">First Name</label>
+        <input
+          id="firstName"
+          type="text"
+          [formControl]="details.controls.firstName"
+        />
+        <div
+          *ngIf="
+            details.controls.firstName.hasError('required') &&
+            details.controls.firstName.touched
+          "
+        >
+          Please enter first name
         </div>
       </div>
-      <button class="btn" [disabled]="!details.valid">Save</button>
-    </form>
-  </div>
-</section>
+      <div>
+        <label for="lastName">Last Name</label>
+        <input
+          id="lastName"
+          type="text"
+          [formControl]="details.controls.lastName"
+        />
+        <div
+          *ngIf="
+            details.controls.lastName.hasError('required') &&
+            details.controls.lastName.touched
+          "
+        >
+          Please enter last name
+        </div>
+      </div>
+      <div>
+        <label for="middleInitial">Middle Initial</label>
+        <input
+          id="middleInitial"
+          type="text"
+          [formControl]="details.controls.middleInitial"
+        />
+        <div
+          *ngIf="
+            details.controls.middleInitial.hasError('maxlength') &&
+            details.controls.middleInitial.touched
+          "
+        >
+          Only 1 character please
+        </div>
+      </div>
+      <div>
+        <label for="position">Position:</label>
+        <input
+          id="position"
+          type="text"
+          [formControl]="details.controls.position"
+        />
+        <div
+          *ngIf="
+            details.controls.position.hasError('minlength') &&
+            details.controls.position.touched
+          "
+        >
+          Position is too short
+        </div>
+      </div>
+      <div>
+        <label for="department">Department:</label>
+        <select
+          id="department"
+          [formControl]="details.controls.department"
+        >
+          <option *ngFor="let dep of departments" [value]="dep">
+            {{ dep }}
+          </option>
+        </select>
+      </div>
+      <div>
+        <label for="immediateSupervisor">Supervisor:</label>
+        <input
+          id="immediateSupervisor"
+          type="text"
+          [formControl]="details.controls.immediateSupervisor"
+        />
+      </div>
+      <div>
+        <label for="phone">Phone:</label>
+        <input
+          id="phone"
+          type="tel"
+          [formControl]="details.controls.phoneNumber"
+          [class.invalid]="details.controls.phoneNumber.invalid"
+        />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input
+          class="email-input"
+          id="email"
+          type="email"
+          [formControl]="details.controls.email"
+        />
+      </div>
+      <div>
+        <p>
+          <input
+            name="status"
+            [formControl]="details.controls.status"
+            value="Active"
+            type="radio"
+            id="status1"
+          />
+          <label for="status1">Active</label>
+        </p>
+        <p>
+          <input
+            name="status"
+            [formControl]="details.controls.status"
+            value="Inactive"
+            type="radio"
+            id="status2"
+          />
+          <label for="status2">Inactive</label>
+        </p>
+      </div>
+    </div>
+    <button [disabled]="!details.valid">Save</button>
+  </form>
+</article>
 
-<section class="card">
-  <div class="card-content">
-    <div class="card-title">Form Data</div>
+<article>
+  <header>Form Data</header>
 
-    Form Value Object:
-    <pre>{{ details.value | json }}</pre>
-    Form Validity:
-    <div>{{ details.valid }}</div>
+  Form Value Object:
+  <pre>{{ details.value | json }}</pre>
 
-    <button class="btn" (click)="logTheForm()">
-      Log Form Object
-    </button>
-  </div>
-</section>
+  Form Validity:
+  <div>{{ details.valid }}</div>
+
+  <button (click)="logTheForm()">Log Form Object</button>
+</article>

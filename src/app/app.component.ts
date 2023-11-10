@@ -1,15 +1,19 @@
+import { NgIf, NgFor, JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
   FormGroup,
-  Validators
+  Validators,
+  ReactiveFormsModule
 } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [ReactiveFormsModule, NgIf, NgFor, JsonPipe]
 })
 export class AppComponent {
   details: FormGroup<{

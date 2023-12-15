@@ -11,7 +11,7 @@ import {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrl: './app.component.scss',
   standalone: true,
   imports: [ReactiveFormsModule, NgIf, NgFor, JsonPipe]
 })
@@ -32,7 +32,7 @@ export class AppComponent {
   // Consider using NonNullableFormBuilder if you never
   // set or want to reset any of your controls to a `null` value
   // Learn more about Typed Forms Nullability here:
-  // https://angular.io/guide/typed-forms#nullability
+  // https://angular.dev/guide/forms/typed-forms#nullability
 
   constructor(fb: FormBuilder) {
     this.details = fb.group({

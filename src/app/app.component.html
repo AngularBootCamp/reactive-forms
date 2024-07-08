@@ -9,14 +9,12 @@
           type="text"
           [formControl]="details.controls.firstName"
         />
-        <div
-          *ngIf="
-            details.controls.firstName.hasError('required') &&
-            details.controls.firstName.touched
-          "
-        >
-          Please enter first name
-        </div>
+        @if (
+          details.controls.firstName.hasError('required') &&
+          details.controls.firstName.touched
+        ) {
+          <div>Please enter first name</div>
+        }
       </div>
       <div>
         <label for="lastName">Last Name</label>
@@ -25,14 +23,12 @@
           type="text"
           [formControl]="details.controls.lastName"
         />
-        <div
-          *ngIf="
-            details.controls.lastName.hasError('required') &&
-            details.controls.lastName.touched
-          "
-        >
-          Please enter last name
-        </div>
+        @if (
+          details.controls.lastName.hasError('required') &&
+          details.controls.lastName.touched
+        ) {
+          <div>Please enter last name</div>
+        }
       </div>
       <div>
         <label for="middleInitial">Middle Initial</label>
@@ -41,14 +37,12 @@
           type="text"
           [formControl]="details.controls.middleInitial"
         />
-        <div
-          *ngIf="
-            details.controls.middleInitial.hasError('maxlength') &&
-            details.controls.middleInitial.touched
-          "
-        >
-          Only 1 character please
-        </div>
+        @if (
+          details.controls.middleInitial.hasError('maxlength') &&
+          details.controls.middleInitial.touched
+        ) {
+          <div>Only 1 character please</div>
+        }
       </div>
       <div>
         <label for="position">Position:</label>
@@ -57,14 +51,12 @@
           type="text"
           [formControl]="details.controls.position"
         />
-        <div
-          *ngIf="
-            details.controls.position.hasError('minlength') &&
-            details.controls.position.touched
-          "
-        >
-          Position is too short
-        </div>
+        @if (
+          details.controls.position.hasError('minlength') &&
+          details.controls.position.touched
+        ) {
+          <div>Position is too short</div>
+        }
       </div>
       <div>
         <label for="department">Department:</label>
@@ -72,9 +64,11 @@
           id="department"
           [formControl]="details.controls.department"
         >
-          <option *ngFor="let dep of departments" [value]="dep">
-            {{ dep }}
-          </option>
+          @for (dep of departments; track dep) {
+            <option [value]="dep">
+              {{ dep }}
+            </option>
+          }
         </select>
       </div>
       <div>

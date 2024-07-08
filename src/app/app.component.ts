@@ -1,4 +1,4 @@
-import { NgIf, NgFor, JsonPipe } from '@angular/common';
+import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import {
   FormBuilder,
@@ -13,7 +13,7 @@ import {
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   standalone: true,
-  imports: [ReactiveFormsModule, NgIf, NgFor, JsonPipe]
+  imports: [ReactiveFormsModule, JsonPipe]
 })
 export class AppComponent {
   details: FormGroup<{
